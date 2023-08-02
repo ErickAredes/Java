@@ -1,0 +1,58 @@
+programa {
+
+    funcao inicio() {
+        inteiro i, pass, nt
+        inteiro quantidade[4] = {0, 0, 0, 0}
+        inteiro notas[4] = {100, 100, 100, 100}
+        inteiro nota[4] = {50, 10, 5, 1}
+        inteiro extrato[10], variavel = 2000, saque = 1, BS50 = 100, BS10 = 100, BS5 = 100, BS1 = 100, r50, r20, r10, r5
+        inteiro senha[10] = {111, 222, 333, 444, 555, 666, 777, 888, 999, 1010}
+        inteiro valor[10] = {2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000}
+        cadeia id[10] = {"Eduardo", "Erick", "Raul", "Pedro", "Vinicius", "Gustavo", "Kalebe", "Luis", "Golle", "Augusto"}
+        cadeia usuario
+
+        nt = -1
+        enquanto (nt != 0) {
+
+            escreva("Digite seu ID: ")
+            leia(usuario)
+
+            escreva("Digite sua Senha: ")
+            leia(pass)
+
+            para(i=0; i < 10; i++){
+           
+                se (id[i] == usuario e senha[i] == pass) {
+                    escreva("Seu Saldo: " + valor[i] + "\n") 
+                    escreva("Digite o Valor do Saque: ")
+                    leia(saque)
+				valor[i] = valor[i] - saque
+				
+                    se (saque > 0 e saque <=1000) {
+                        para (inteiro k = 0; k < 4; k++) { //contador de notas
+                            enquanto (saque >= nota[k] e notas[k] > 0) {
+                                quantidade[k] = quantidade[k] + 1
+                                notas[k] = notas[k] - 1
+                                saque = saque - nota[k]
+                                
+                            }
+
+                           
+                        }
+                        limpa()
+                        para (inteiro l = 0; l < 4; l++) {
+                            se (quantidade[l] > 0) {
+                                escreva(quantidade[l] + " notas de B$ " + nota[l] + ",00 bits\n \n")
+                            }
+                            quantidade[l] = 0 //reinicia a contagem das notas
+                        }
+                    }
+                     se (valor[i] < saque) {
+                        escreva("Saldo Indisponível \n \n")	
+                    		valor[i] += saque
+                    }   
+                }
+            }
+        }
+    }
+}
