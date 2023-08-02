@@ -1,0 +1,38 @@
+
+package exer2;
+
+import javax.swing.JOptionPane;
+
+public class Exer2 {
+
+    public static void main(String[] args) {
+        // Desenvolvimento de uma lista de chamada que contém 4 nomes.
+        // Perguntar o nome a ser procurado na lista de presença
+        //armazenamento em vetor.
+        //marcação se achou ou não achou o nome.
+        //marcação de posição dos nomes.
+
+        //O professor pedro tem uma turma de poucos alunos, ele é um professor novo na escola 
+        //e não gravou a fisionomia dos seus alunos junto com os nomes 
+        // ele tem muita dificultade com isso, portanto foi criada uma lista com a busca do nome na escrita correta 
+        // e com a palavra achei para ter o encontro do nome ou vice-versa.
+        
+        
+        String [] listaDenomes = new String[10]; //vetor para armazenar os nomes.
+        for(int i = 1 ; i < 5 ; i ++ ){//looping dos nomes
+            listaDenomes[i] =JOptionPane.showInputDialog("Informe um nome: ");//vetor de armazenamento junto com pergunta dos nomes
+        }
+        String nomeX = JOptionPane.showInputDialog("Informe o nome x : ");//nome a ser procurado.
+        int achei = 0 , naoachei = 0 ;//se achou ou nao achou
+        for ( int i = 1 ; i < 5 ; i++){//looping para encontrar o nome ou nao
+            if(nomeX.equals(listaDenomes[i])){//se o nome bater ele achou
+                System.out.println("Achei ! posição: " + i);//se achou + a posicao em que ele estava
+                achei++;
+            }else{//se nao bater ele n achou
+                System.out.println("Não achei ! posição: " + i );// se nao achou + a posiçao dele
+                naoachei++;
+           }
+        }
+        JOptionPane.showMessageDialog(null,"Achei " + achei + "\nNão achei " + naoachei);//mensagem em que aparece se achou ou nao achou o nome
+    }
+}
