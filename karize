@@ -6,16 +6,10 @@ import javax.swing.JOptionPane;
 public class Exer2 {
 
     public static void main(String[] args) {
-        // Desenvolvimento de uma lista de chamada que contém 4 nomes.
-        // Perguntar o nome a ser procurado na lista de presença
-        //armazenamento em vetor.
-        //marcação se achou ou não achou o nome.
-        //marcação de posição dos nomes.
-
-        //O professor pedro tem uma turma de poucos alunos, ele é um professor novo na escola 
-        //e não gravou a fisionomia dos seus alunos junto com os nomes 
-        // ele tem muita dificultade com isso, portanto foi criada uma lista com a busca do nome na escrita correta 
-        // e com a palavra achei para ter o encontro do nome ou vice-versa.
+     
+    O Professor Pedro enfrenta um desafio: ele possui uma turma pequena e é novo na escola, então não consegue associar os nomes dos alunos às suas fisionomias. 
+    Para ajudá-lo, foi desenvolvida uma lista que permite procurar os nomes corretamente escritos e 
+    usar a palavra "achei" para indicar quando ele encontra o nome certo ou vice-versa.
         
         
         String [] listaDenomes = new String[10]; //vetor para armazenar os nomes.
