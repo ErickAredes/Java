@@ -1,0 +1,29 @@
+
+package exer6;
+
+import java.util.Scanner;
+import javax.swing.JOptionPane;
+
+public class Exer6 {
+ 
+    public static void main(String[] args) {
+    int nomeAlunos = Integer.parseInt(JOptionPane.showInputDialog("Informe a quantidade de alunos: "));
+        int qntdNotas = Integer.parseInt(JOptionPane.showInputDialog("Informe a quantidade de notas: "));
+        float media = 0;
+        String[] nomealunos = new String[nomeAlunos];
+        int[] notasalunos = new int[qntdNotas]; // Corrigido para usar qntdNotas
+        
+        for (int i = 0; i < nomeAlunos; i++) {
+            nomealunos[i] = JOptionPane.showInputDialog("Informe o nome do aluno " + (i + 1) + ": ");
+        }
+        
+        for (int i = 0; i < qntdNotas; i++) {
+            notasalunos[i] = Integer.parseInt(JOptionPane.showInputDialog("Informe a nota do aluno " + (i + 1) + ": "));
+            media += notasalunos[i]; // Adicionado a nota à soma das notas
+        }
+        
+        media /= qntdNotas; // Calculando a média corretamente
+        
+        JOptionPane.showMessageDialog(null, "A média será: " + media);
+    }  
+}
