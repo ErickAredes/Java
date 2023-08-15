@@ -1,1 +1,47 @@
+package provadetetive;
+
+import javax.swing.JOptionPane;
+
+public class Provadetetive {
+
+    public static void main(String[] args) {
+        
+        int cont = 0;
+        String resposta = " ";
+        
+        resposta = JOptionPane.showInputDialog("Telefonou para a vítima? ");
+        if(resposta.equalsIgnoreCase("Sim")){
+            cont++;
+        }
+          resposta = JOptionPane.showInputDialog("Esteve no local do crime? ");
+        if(resposta.equalsIgnoreCase("Sim")){
+            cont++;
+        }
+           resposta = JOptionPane.showInputDialog("Mora perto da vítima? ");
+        if(resposta.equalsIgnoreCase("Sim")){
+            cont++;
+        }
+           resposta = JOptionPane.showInputDialog("Estava com divididas com a vítima? ");
+        if(resposta.equalsIgnoreCase("Sim")){
+            cont++;
+        }
+           resposta = JOptionPane.showInputDialog("Já trabalhou com a vítima? ");
+        if(resposta.equalsIgnoreCase("Sim")){
+            cont++;
+        }
+        
+        if(cont == 2){
+            JOptionPane.showMessageDialog(null,"Suspeito");
+        }else if(cont == 3 || cont ==4){
+            JOptionPane.showMessageDialog(null, "Cumplice");
+        }else if ( cont == 5){ 
+            JOptionPane.showMessageDialog(null,"Assasino");
+        }else {
+            JOptionPane.showMessageDialog(null,"Inocente");
+        }
+        
+                
+    }
+    
+}
 
