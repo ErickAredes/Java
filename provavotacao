@@ -1,0 +1,35 @@
+
+package provavotacao;
+
+import javax.swing.JOptionPane;
+
+public class Provavotacao {
+    public static void main(String[] args) {
+        
+        int num,candidato_1=0,candidato_2=0,candidato_3=0,candidato_4=0,voto_Nulo=0,voto_Branco=0;
+        
+        do {
+        num = Integer.parseInt(JOptionPane.showInputDialog("Informe o numero do candidato: "));
+        switch (num) {
+            case 1-> candidato_1 +=1;
+            case 2 -> candidato_2 +=1;
+            case 3 -> candidato_3 +=1;
+            case 4 -> candidato_4 +=1;
+            case 5 -> voto_Nulo +=1;
+            case 6 -> voto_Branco +=1;
+           
+            default-> JOptionPane.showMessageDialog(null,"Valor inválido");
+        }
+       
+    }while(num != 0);
+    
+   JOptionPane.showMessageDialog(null,"RESULTADO DA VOTAÇÃO\n"+"CANDIDATO 1:"+candidato_1+"\n"
+    + "CANDIDATO 2: "+candidato_2+"\n"
+    + "CANDIDATO 3: "+candidato_3+"\n"
+    + "CANDIDATO 4: "+candidato_4+"\n"
+    + "VOTOS NULOS: "+voto_Nulo+"\n"
+    + "VOTOS BRANCOS: "+voto_Branco+"\n"
+    );
+    
+    }
+}
