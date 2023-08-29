@@ -1,0 +1,36 @@
+
+package workdoandwhile;
+
+import javax.swing.JOptionPane;
+
+
+public class MetodoReplace {
+    
+    public static void main(String[] args) {
+        
+        String frase = JOptionPane.showInputDialog("Digite uma frase: ");
+        
+        JOptionPane.showMessageDialog(null,"Trocando caracteres da palavra: \n " + frase 
+                                         + "o 'a' por 'u' \n " + frase.replace("a", "u"));
+        
+        //Tirando os espaços vazios
+        JOptionPane.showMessageDialog(null,"Tirando os espaços vazios da palavra: "
+                                     + "\n " + frase + "\n " + frase.replace("", ""));
+        
+        //Trocando vetor
+        String[] cores = {"azul","amarelo","vermelho"};
+        
+        for (int i = 0; i < 3; i++) {
+            JOptionPane.showMessageDialog(null,"Trocando caracteres 'a' por 'u' da palavra no vetor: "
+                                             + "\n " + cores[i] + "\n" + cores[i].replace("a", "u"));
+            
+        }
+        
+        //Metodo leght conta quantidade de caracteres
+        
+        int quantidade = frase.length();
+        
+        JOptionPane.showMessageDialog(null,"Quantidade de espaços da frase " + quantidade);
+    }
+    
+}
