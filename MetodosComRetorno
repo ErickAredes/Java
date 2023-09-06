@@ -1,0 +1,29 @@
+
+package metodocomretorno2;
+
+import javax.swing.JOptionPane;
+
+public class MetodoComRetorno2 {
+public static void main(String[] args) {
+    
+    Object[] lista = {"Cadastrar Numeros", "Listar Numeros", "Numeros Pares", 
+        "Numeros Impares", "Numeros Pares posição Impar", "Numeros Impares posição par", "Sair"};
+    Object opLista = JOptionPane.showInputDialog(null, "Escolha uma opção","Lista de Opções",
+            JOptionPane.INFORMATION_MESSAGE,null, lista, lista[0]);
+    String opcao = (String) opLista;
+    switch(opcao) {
+        case "Cadastrar Numeros" -> cadastrarNumeros();
+        case "Listar Numeros" -> listarNumeros();
+        case "Numeros Pares" -> listarNumerosPares();
+        case "Numeros Impares" -> listarnumerosImpares();
+        case "Numeros Pares Posição Impar" -> listarNumerosParesPosicaoImpar();
+        case "Numeros Impares posição par" -> listarNumerosImparesPosicaoPar();
+        case "Sair" -> JOptionPane.showMessageDialog(null, "Até logo");
+        
+        default -> digitarValorValido();
+    
+    
+
+    }
+    
+}
