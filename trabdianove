@@ -1,0 +1,29 @@
+
+package bacno;
+
+import javax.swing.JOptionPane;
+
+public class Bacno {
+
+    public static void main(String[] args) {
+
+        Object[] opcao = {"Alterar histórico do livro"};
+        
+        Object selectOpcao = JOptionPane.showInputDialog(null,"Escolha uma opcao",""
+                +"Alterar histórico do livro"+"",JOptionPane.INFORMATION_MESSAGE,null,opcao,opcao[0]);
+        
+        String op = (String) selectOpcao;
+        
+        switch (op) {
+            case "abrir conta":
+            
+            break;
+            case"depositar":
+                
+            default:
+                throw new AssertionError();
+        }
+        
+    }
+    
+}
